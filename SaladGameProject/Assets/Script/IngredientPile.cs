@@ -8,7 +8,7 @@ public class IngredientPile : MonoBehaviour
     Vector2 difference = Vector2.zero;
     private bool isLocked;
 
-    private GameObject draggingObj;
+    
 
     void Start()
     {

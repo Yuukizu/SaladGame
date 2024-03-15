@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DetectVeggie : MonoBehaviour
 {
-    [SerializedField] private Transform targetObject; // The specific object to reach
+    [SerializeField] private Transform targetObject; // The specific object to reach
     [SerializeField] private float lockDistance = 0.1f; // The distance within which the object is considered to have reached the target
 
     private bool isLocked = false;

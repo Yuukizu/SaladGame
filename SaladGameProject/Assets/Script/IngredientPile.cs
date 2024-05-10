@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class IngredientPile : MonoBehaviour
 {
-    [SerializeField] private GameObject Veggie;
+    [SerializeField]private GameObject Veggie;
     Vector2 difference = Vector2.zero;
-    private bool isLocked;
+    private Vector2 originalposition;
+    private bool isDragging;
+    private GameObject draggingObj;
+    private bool isActive = true;
 
-    
 
-    void Start()
+    void Awake()
     {
-        
+        originalposition = transform.position;
     }
 
     
@@ -42,9 +44,12 @@ public class IngredientPile : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (draggingObj != null)
-        {
-            var screenPos = Input.mousePosition;
-        }
+        transform.position = originalposition;
+        isDragging = false;
+
+        
     }
+
+    
+
 }

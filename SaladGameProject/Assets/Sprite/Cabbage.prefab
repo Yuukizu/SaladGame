@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8980248532123009815}
   - component: {fileID: 4440834162971222013}
   - component: {fileID: 7737825714913435965}
+  - component: {fileID: 51485504580269097}
   m_Layer: 0
   m_Name: Cabbage
   m_TagString: Veggettable
@@ -135,3 +136,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 5201611876450951011, guid: e240bb7d4bd68cd4583235acb6863cd0, type: 3}
   lockDistance: 0.1
+--- !u!114 &51485504580269097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320417277679539643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3c8d742d76ba8428ae0304516f4b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

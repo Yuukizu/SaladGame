@@ -569,6 +569,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Veggie: {fileID: 8666685904320108139, guid: 4def2fe5ffedcb04ba4073dbf935cc7b, type: 3}
+  Plate: {fileID: 1281471126}
+  Plateposition: {fileID: 8004945265332003733}
 --- !u!61 &856247669
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -713,6 +715,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Veggie: {fileID: 320417277679539643, guid: df22735a9a79bb74ab312d330e44d7cd, type: 3}
+  Plate: {fileID: 1281471126}
+  Plateposition: {fileID: 8004945265332003733}
 --- !u!61 &912838661
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1116,6 +1120,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1281471127}
   m_SourcePrefab: {fileID: 100100000, guid: e240bb7d4bd68cd4583235acb6863cd0, type: 3}
+--- !u!4 &8004945265332003733 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5201611876450951011, guid: e240bb7d4bd68cd4583235acb6863cd0, type: 3}
+  m_PrefabInstance: {fileID: 8004945265332003732}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

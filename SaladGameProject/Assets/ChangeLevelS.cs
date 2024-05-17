@@ -30,4 +30,6 @@ public class ChangeLevelS : MonoBehaviour
     {
         SceneManager.LoadScene("Leve2");
     }
+
+    
 }

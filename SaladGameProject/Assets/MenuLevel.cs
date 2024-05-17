@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuLevel : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class MenuLevel : MonoBehaviour
     SeneManagement sceneMangament;
 
     private GameData gameData;
+
+    [SerializeField] private Button NewgameButton;
+    [SerializeField] private Button LoadGameButton;
+    
 
     private void Start()
     {
@@ -36,7 +41,7 @@ public class MenuLevel : MonoBehaviour
     public void NewPgame()
     {
         DataManager.instance.NewGame();
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadSceneAsync("Level1");
     }
     public void SavePgame()
     {
@@ -46,7 +51,12 @@ public class MenuLevel : MonoBehaviour
     public void LoadPgame()
     {
         DataManager.instance.LoadGame();
+        SceneManager.LoadSceneAsync("Level1");
     }
 
-   
+    private void Disablebutton()
+    {
+        NewgameButton.interactable = false;
+        LoadGameButton.interactable = false;
+    }
 }

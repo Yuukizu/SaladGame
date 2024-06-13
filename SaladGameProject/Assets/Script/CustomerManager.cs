@@ -8,19 +8,16 @@ public class CustomerManager : MonoBehaviour
 
     public void SpawnCustomer(int menuItemIndex)
     {
-        GameObject newCustomer = Instantiate(customerPrefab, spawnPoint.position, spawnPoint.rotation);
+        GameObject newCustomer = Instantiate(customerPrefab, spawnPoint.position, Quaternion.identity);
         Customer customerScript = newCustomer.GetComponent<Customer>();
-        if (menuItemIndex >= 0 && menuItemIndex < menu.menuItems.Count)
-        {
             MenuItem assignedMenuItem = menu.menuItems[menuItemIndex];
             customerScript.SetMenuItem(assignedMenuItem);
-            DisplayMenuItem(assignedMenuItem); // Update the UI to show the assigned menu item
-        }
+            DisplayMenuItem(assignedMenuItem); 
     }
 
     void DisplayMenuItem(MenuItem menuItem)
     {
-        UIManager uiManager = GameObject.FindObjectOfType<UIManager>(); // Find the UIManager script in the scene
+        UIManager uiManager = GameObject.FindObjectOfType<UIManager>(); 
         uiManager.DisplayMenuItem(menuItem);
     }
 }

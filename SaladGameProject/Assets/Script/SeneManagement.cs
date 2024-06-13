@@ -11,7 +11,7 @@ public class SeneManagement : MonoBehaviour, IDataPersistance
     
     public bool isChnagingScene = false;
     public int Money;
-    [SerializeField] GameObject menu;
+    
     
     private bool iswin = false;
 

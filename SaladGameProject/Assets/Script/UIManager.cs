@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    public Text menuItemText; // Text UI to display the current menu item and ingredients
+    public TMP_Text menuItemText; // Text UI to display the current menu item and ingredients
 
     public void DisplayMenuItem(MenuItem menuItem)
     {

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class IngredientObject : MonoBehaviour
 {
-    
+    public string vegName;
 }

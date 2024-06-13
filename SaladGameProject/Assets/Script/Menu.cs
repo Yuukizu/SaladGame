@@ -25,7 +25,7 @@ public class Menu : MonoBehaviour
                 itemName = "Salad3",
                 requiredIngredients = new List<string> { "Lettuce", "Tomato", "Cucumber", "Corn" }
             }
-            // Add more menu items as needed
+            
         };
     }
 }

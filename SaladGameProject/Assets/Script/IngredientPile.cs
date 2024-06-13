@@ -14,21 +14,27 @@ public class IngredientPile : MonoBehaviour
     private GameObject draggingObj;
     private bool isActive = true;
     private bool isPlatefull = false;
+    private Plate platescript;
+    private AudioManager audioManager;
 
 
-
-
-    void Awake()
+    private void Awake()
     {
-        
+
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
-
-    
-    
-
-    private void Update()
+    void Start()
     {
-       
+
+        Plate = GameObject.Find("Plate"); // Find the Plate GameObject in the scene
+        if (Plate != null)
+        {
+            platescript = Plate.GetComponent<Plate>(); // Get the Plate script component
+        }
+        else
+        {
+            Debug.LogError("Plate GameObject not found");
+        }
     }
 
     private void OnMouseDown()
@@ -37,8 +43,11 @@ public class IngredientPile : MonoBehaviour
         mousePos.z = 10f;
         if(isPlatefull == false )
         {
-            draggingObj = Instantiate(Veggie, Plateposition.position, Quaternion.identity);
+            audioManager.PlaySFX(audioManager._clickSound);
+            GameObject newIngredient = Instantiate(Veggie, Plateposition.position, Quaternion.identity);
+            platescript.AddIngredient(newIngredient);
             isPlatefull = true;
+           
         }
         else
         {
@@ -46,17 +55,7 @@ public class IngredientPile : MonoBehaviour
         }
     }
 
-    private void OnMouseDrag()
-    {
-
-        
-        //if (draggingObj != null)
-        //{
-        //    var screenPos = Input.mousePosition;
-        //    screenPos.z = 10f;
-        //    draggingObj.transform.position = Camera.main.ScreenToWorldPoint(screenPos);
-        //}
-    }
+    
 
     
 

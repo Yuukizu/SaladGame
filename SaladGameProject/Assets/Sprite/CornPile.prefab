@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3824925168135001131}
   - component: {fileID: 1593111169829069117}
   - component: {fileID: 1743736016219697466}
-  - component: {fileID: -6713391209082743384}
+  - component: {fileID: -9176227137437134529}
   m_Layer: 0
-  m_Name: Tomato
+  m_Name: CornPile
   m_TagString: Veggettable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: e3ddd328904d4384cbee7b80ed503555, type: 3}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 21300000, guid: badef0ef171cef545b4c62dbf1b8cfc5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 5201611876450951011, guid: e240bb7d4bd68cd4583235acb6863cd0, type: 3}
   lockDistance: 0.1
---- !u!114 &-6713391209082743384
+--- !u!114 &-9176227137437134529
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,4 +148,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf3c8d742d76ba8428ae0304516f4b0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vegName: Tomato
+  vegName: Corn

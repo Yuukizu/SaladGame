@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Veggettable
+  - IngredientTag
+  - Audio
   layers:
   - Default
   - TransparentFX

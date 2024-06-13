@@ -3,11 +3,11 @@ using UnityEngine;
 public class Customer : MonoBehaviour
 {
     private MenuItem menuItem; // The menu item required by this customer
-    private PlayerHP player; // Reference to the player
+    private SeneManagement managerS;
 
     void Start()
     {
-        player = GameObject.FindObjectOfType<PlayerHP>(); // Find the Player script in the scene
+        
     }
 
     public void SetMenuItem(MenuItem item)
@@ -20,7 +20,7 @@ public class Customer : MonoBehaviour
         return menuItem;
     }
 
-    public void OnClick()
+    public void OnMouseDown()
     {
         Plate plateScript = GameObject.Find("Plate").GetComponent<Plate>(); // Assuming the plate is named "Plate"
         if (plateScript != null)
@@ -34,22 +34,38 @@ public class Customer : MonoBehaviour
                 HandleIncorrectPlate();
             }
         }
+        else
+        {
+            Debug.Log("NOO");
+        }
     }
 
     void ServePlate()
     {
-        // Handle serving the plate to the customer
+        
         Debug.Log("Plate served to the customer!");
-        // Add your logic here (e.g., increase score, remove plate, etc.)
-        Destroy(gameObject); // Example: Destroy the customer GameObject
+        MoneyGenerate();
+        Destroy(gameObject); 
     }
 
     void HandleIncorrectPlate()
     {
         Debug.Log("Incorrect ingredients! The customer is leaving.");
-        player.DecreaseHealth();
-        // Add logic for customer leaving (e.g., destroy customer, move them away, etc.)
+        FailServed();
+        
         Destroy(gameObject); // Example: Destroy the customer GameObject
     }
+
+    public void MoneyGenerate()
+    {
+        SeneManagement.instance.Money += 1;
+
+    }
+    public void FailServed()
+    {
+        SeneManagement.instance.Money -= 1;
+
+    }
+
 }
 
